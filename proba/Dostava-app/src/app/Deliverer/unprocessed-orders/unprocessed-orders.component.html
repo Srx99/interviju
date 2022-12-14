@@ -1,0 +1,23 @@
+<app-navbar-deliverer></app-navbar-deliverer>
+  <br>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="col" *ngFor="let order of listOfUnprocessedOrders">
+          <div class="pomocna">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Dish Name : </strong>{{order.dishName}}</li>
+              <li class="list-group-item"><strong>Prica : </strong>{{order.price}}</li>
+              <li class="list-group-item"><strong>Order Address : </strong>{{order.orderAddress}}</li>
+              <li class="list-group-item"><strong>Comment : </strong>{{order.comentar}}</li>
+              <div *ngIf="this.alreadyHasAnOrder == 'f'">
+                <li class="list-group-item" (click)="AcceptOrder(order.id)"><button >Accept Order</button></li>
+              </div>            
+            </ul>
+          </div>
+           
+          </div>    
+    </div>
+    <div class="col-md-4"></div>
+</div>
+

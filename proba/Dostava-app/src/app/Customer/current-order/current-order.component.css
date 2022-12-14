@@ -1,0 +1,25 @@
+
+.col{
+    background-color: rgba(0,0,0,0.5) !important;  
+    margin-top: 100px;
+    border-radius: 30px;
+}
+
+.list-group-item{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    background-color: rgba(0,0,0,0.5) !important;  
+}
+
+strong{
+    color: white;
+}
+
+li{
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+}

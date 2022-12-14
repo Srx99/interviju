@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <p style="color: aliceblue; margin-left: 20px; margin-right: 700px;"><strong>Ž O L T</strong></p>
+
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item" *ngIf="user.status == 'accepted'"> 
+                    <a class="nav-link" [routerLink]="['/indexdeliverer']"><u>Home</u></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/editprofile']"><u>Edit/View Profile</u></a>
+                </li>
+                -->
+                <li class="nav-item" *ngIf="user.status == 'accepted'">
+                    <a class="nav-link" [routerLink]="['/unprocessed']"><u>New Orders</u></a>
+                </li>
+                <li class="nav-item" *ngIf="user.status == 'accepted'">
+                    <a class="nav-link" [routerLink]="['/orderhistory']"><u>Orders History</u></a>
+                </li>
+                <li class="nav-item" *ngIf="user.status == 'accepted'">
+                    <a class="nav-link" [routerLink]="['/map']"><u>Map</u></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/editprofile']">
+                        <img src="../assets/images/Person.jpg" alt="..." class="rounded-circle registration_image" *ngIf="hasImage == false "/>
+                        <img #im [src]="image" alt="..." class="rounded-circle registration_image" *ngIf="hasImage != false ">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button (click)="OnLogout()">Logout</button>                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>

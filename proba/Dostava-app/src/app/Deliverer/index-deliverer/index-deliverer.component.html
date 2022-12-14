@@ -1,0 +1,46 @@
+<app-navbar-deliverer></app-navbar-deliverer>
+
+<div *ngIf="verificationStatus == 'accepted'">
+    <div *ngIf="delivererHasOrder == false">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                <h1>No current orders!</h1>
+                <img src="../assets/images/bag.jpg" class="slika1" />
+                <a class="nav-link" [routerLink]="['/unprocessed']"><u>Click here for new order</u></a>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+                
+    </div>
+    <div class="glv" *ngIf="delivererHasOrder != false">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="pomocna">
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Dish Name : </strong>{{currentOrder.dishName}}</li>
+                    <li class="list-group-item"><strong>Price : </strong>{{currentOrder.price}}</li>
+                    <li class="list-group-item"><strong>Order Address : </strong>{{currentOrder.orderAddress}}</li>
+                    <li class="list-group-item"><strong>Comment : </strong>{{currentOrder.comentar}}</li>
+                    <li class="list-group-item" (click)="FinishOrder(currentOrder.id)"><button>Finish Order</button></li>
+                    
+                    <li class="list-group-item" *ngIf="currentOrder.time != null">
+                        <span>
+                            <app-timer [data]=currentOrder.time [idOrder]=currentOrder.id></app-timer>
+                        </span>                         
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        
+    </div>
+</div>
+<div *ngIf="verificationStatus == 'processing'">
+    <h1>In process of verification...</h1>
+</div>
+<div *ngIf="verificationStatus == 'denied'">
+    <h1>Your request is denied.</h1>
+</div>

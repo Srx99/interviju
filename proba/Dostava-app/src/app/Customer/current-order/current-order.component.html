@@ -1,0 +1,27 @@
+<app-navbar-customer></app-navbar-customer>
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div *ngIf="hasOrder == true">
+        <div class="col" *ngFor="let order of listOfOrders">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Dish Name : </strong>{{order.dishName}}</li>
+            <li class="list-group-item"><strong>Order Address : </strong>{{order.orderAddress}}</li>
+            <li class="list-group-item"><strong>Comment : </strong>{{order.comentar}}</li>
+            <li class="list-group-item"><strong>Price : </strong>{{order.price}}</li>
+            <li class="list-group-item"><strong>Status : </strong>{{order.status}}</li>
+            <li class="list-group-item" *ngIf="order.time != null && order.status == 'inProcess'">
+              <span>
+                  <app-timer [data]=order.time [idOrder]=order.id></app-timer>
+              </span>                         
+          </li>
+          </ul>
+        </div>    
+      </div>
+      <div *ngIf="hasOrder == false">
+        <h1>No current orders.</h1>
+      </div> 
+    </div>
+      <div class="col-md-4"></div>
+</div>

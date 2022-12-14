@@ -1,0 +1,25 @@
+
+.list-group-item{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    background-color: rgba(0,0,0,0.8) !important;  
+}
+
+li{
+    color: white;
+}
+
+button{
+    border-radius: 25px;
+    width: 50%;
+    height: 30px;
+    border: none;
+    margin-left: 4.5rem;
+    background-image: linear-gradient(to right, #F9A826, #F9A826, #F9A826);
+}
+
+.registration_image {
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+  }

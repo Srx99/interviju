@@ -1,0 +1,24 @@
+<app-navbar-deliverer></app-navbar-deliverer>
+<div class="map-orders">
+    <br>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+          <div class="col">
+            <div class="pomocna">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Dish Name : </strong>{{clieckedOrder.dishName}}</li>
+                <li class="list-group-item"><strong>Prica : </strong>{{clieckedOrder.price}}</li>
+                <li class="list-group-item"><strong>Order Address : </strong>{{clieckedOrder.orderAddress}}</li>
+                <li class="list-group-item"><strong>Comment : </strong>{{clieckedOrder.comentar}}</li>
+                <div *ngIf="this.alreadyHasAnOrder == 'f'">
+                  <li class="list-group-item" (click)="AcceptOrder(clieckedOrder.id)"><button >Accept Order</button></li>
+                </div>          
+              </ul>
+            </div>
+             
+            </div>    
+      </div>
+      <div class="col-md-4"></div>
+  </div>
+  </div>

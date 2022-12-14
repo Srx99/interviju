@@ -1,0 +1,96 @@
+<div class="roe">
+  <div class="clo-12">
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <p style="color: aliceblue; margin-left: 20px;">Ž O L T</p>
+      </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="register-container">  
+    <form [formGroup]="registerForm">    
+      <img class="avatar" src="../assets/images/download6.png">
+      <h2>Welcome!</h2>
+
+        <img  src="../assets/images/gif.gif" alt="..." class="rounded-circle registration_image" *ngIf="imageStr == '' ">
+        <img  [src]="imageStr" alt="..." class="rounded-circle registration_image" *ngIf="imageStr != '' ">
+
+      <div class="input-div">
+        <input type="file"  accept="image/*" (change)="onSelectImage($event)"/>
+      </div>
+
+      <div class="input-div one">
+      <h5>Username</h5>
+      <input type="text" placeholder="Enter Username" name="username" id="username" formControlName="username">
+      </div>
+      <p class="error-message">{{getUsernameErrorMessage()}}</p>
+
+      <div class="input-div two">
+      <h5>Email</h5>
+      <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
+      </div>
+      <p class="error-message">{{getEmailErrorMessage1()}}</p>
+      <p class="error-message">{{getEmailErrorMessage2()}}</p>
+  
+      <div class="input-div three">
+      <h5>Password</h5>
+      <input type="password" placeholder="Enter Password" name="password" id="password" formControlName="password">
+      </div>
+      <p class="error-message">{{getPasswordReqErrorMessage()}}</p>
+      <p class="error-message">{{getPasswordErrorMessage()}}</p>
+
+      <div class="input-div four">
+      <h5>Repeat Password</h5>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" formControlName="passwordRepeat">
+    
+      </div>
+      <p class="error-message">{{getSecondPasswordErrorMessage()}}</p>
+      
+      <div class="input-div five">
+     <h5>Name</h5>
+      <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+      </div>
+      <p class="error-message">{{getNameErrorMessage()}}</p>
+
+      <div class="input-div six">
+      <h5>Last Name</h5>
+      <input type="text" placeholder="Enter Last Name" name="lastName" id="LastName" formControlName="lastName">    
+      </div>
+      <p class="error-message">{{getLastNameErrorMessage()}}</p>
+
+      <div class="input-div seven">
+      <h5>Adress</h5>
+      <input type="text" placeholder="Enter Address" name="address" id="address" formControlName="address">
+      </div>
+      <p class="error-message">{{getAddressErrorMessage()}}</p>
+
+      <div class="input-div eight">
+      <h5>Date Od Birth</h5>
+      <input type="date" placeholder="Enter Date Of Birth" name="birthDate" id="birthDate" formControlName="dateOfBirth">
+      
+      </div>
+      <p class="error-message">{{getDateErrorMessage()}}</p>
+
+      <div class="input-div nine">
+      <h5>User Type</h5>
+      <select placeholder="Enter User Type" formControlName="userType">
+        <option value="Admin">Admin</option>
+        <option value="Deliverer">Deliverer</option>
+        <option value="Customer">Customer</option>
+      </select>
+      </div>
+      <p class="error-message">{{getUserTypeErrorMessage()}}</p>
+
+      <hr>
+  
+      <button type="submit" class="registerbtn" (click)="OnSubmit(registerForm.value)">Register</button>
+    
+        </form>  
+        
+      </div>
+    </div>
+    <div class="container-signin">
+     <p class="signin">Already have an account? <a [routerLink]="['/']">Sign in</a>.</p>
+    </div>
+
+  

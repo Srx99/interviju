@@ -1,0 +1,19 @@
+<app-navbar-admin></app-navbar-admin>
+    <br>
+    <form [formGroup]="newItemForm">
+        <div class="container">
+            <h1>Add new item in menu</h1>
+            <hr>
+    
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+    
+            <label for="price"><b>Price</b></label>
+            <input type="number" placeholder="Enter Price" name="price" id="price" formControlName="price">
+    
+            <label for="dishes"><b>Dishes</b></label>
+            <input type="text" placeholder="Enter Dishes" name="dishes" id="dishes" formControlName="dishes">
+       
+            <button type="submit" (click)="OnNewItem()">Add new item</button>
+        </div>
+    </form>

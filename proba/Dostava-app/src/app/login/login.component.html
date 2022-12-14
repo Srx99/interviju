@@ -1,0 +1,59 @@
+<head>
+    <script src="https //kit.fontawesome.com/a81368914.js"></script>    
+</head>
+
+
+<body>
+    <div class="roe">
+        <div class="clo-12">
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+                <p style="color: aliceblue; margin-left: 20px;">Ž O L T</p>
+            </nav>
+        </div>
+    </div>
+     
+    <div class="container">
+        <div class="img">
+            <img src="../assets/images/dostava2.jpg">
+        </div>
+        <div class="login-container">
+            <form [formGroup]="loginForm">
+                <img class="avatar" src="../assets/images/download6.png">
+                <h2>LOG IN</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                            <h5>Email</h5>
+                            <input type="text" placeholder="Enter Email" name="email" formControlName="email">                        
+                    </div>
+                </div>
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                            <h5>Password</h5>
+                            <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+                    </div>
+                </div>
+                <button type="submit" (click)="OnLoginSubmit()">Login</button>
+                <!-- <p><button (click)="loginWithGoogle()"> Login With google </button></p> -->
+                <button
+                    (click)="loginWithGoogle()"
+                    class="btn btn-primary btn-lg btn-block"
+                    >
+                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" />
+                    Google
+                    </button>
+
+
+                <p>Don't have an account? <a [routerLink]="['/register']">Register</a>.</p>
+            </form>
+    
+        </div>
+    
+    </div>
+    
+   
+    -->
+    
+</body>
+

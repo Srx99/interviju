@@ -1,0 +1,16 @@
+<app-navbar-admin></app-navbar-admin>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="pomocna" *ngFor="let dish of listOfDishes">
+                <ul class="list-group">
+                  <li class="list-group-item"><strong>Name : </strong>{{dish.name}}</li>
+                  <li class="list-group-item"><strong>Contains : </strong>{{dish.dishes}}</li>
+                  <li class="list-group-item"><strong>Price : </strong>{{dish.price}}</li>          
+                  <li class="list-group-item" (click)="deleteDish(dish)"><button>Delete</button></li>
+                  
+                </ul>
+              </div>            
+        </div>
+        <div class="col-md-4"></div>
+    </div>

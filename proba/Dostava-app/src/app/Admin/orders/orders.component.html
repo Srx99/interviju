@@ -1,0 +1,13 @@
+<app-navbar-admin></app-navbar-admin>
+<button (click)="Submit()"></button>
+<div *ngFor="let dish of ListOfOrders" class="card m-5" style="width:18rem; background-color: green;" >
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Name : </strong>{{dish.dishName}}</li>
+      <li class="list-group-item"><strong>Amount : </strong>{{dish.amount}}</li>
+      <li class="list-group-item"><strong>Address : </strong>{{dish.orderAddress}}</li>
+      <li class="list-group-item"><strong>Comment : </strong>{{dish.comentar}}</li>
+      <li class="list-group-item"><strong>Price : </strong>{{dish.price}}</li>
+      <li class="list-group-item"><strong>Status : </strong>{{dish.status}}</li>
+      <li class="list-group-item"></li>
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+  
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      /**/
+      background-color: rgba(0,0,0,0.5) !important;  
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      color: white;
+    }
+    

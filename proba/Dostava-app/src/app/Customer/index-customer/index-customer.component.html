@@ -1,0 +1,31 @@
+<app-navbar-customer></app-navbar-customer>
+
+  <div class="row">
+      <div class="col-md-6" >
+        <div class="pomocna" *ngFor="let dish of listOfDishes">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Name : </strong>{{dish.name}}</li>
+            <li class="list-group-item"><strong>Contains : </strong>{{dish.dishes}}</li>
+            <li class="list-group-item"><strong>Price : </strong>{{dish.price}}</li>          
+            <li class="list-group-item" (click)="AddDish(dish)"><button>Add</button></li>
+            
+          </ul>
+        </div>
+        
+      </div>
+      <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item"><strong >Dishes : </strong><input [(ngModel)]="addedDishes" readonly = "true" type="text"></li>
+              <li class="list-group-item"><strong>Total Price : </strong><input [(ngModel)]="totalPrice" readonly = "true" type="number"></li>
+              <li class="list-group-item"><strong>Address : </strong><input [(ngModel)]="address" type="text"></li>
+              <li class="list-group-item"><strong>Comment : </strong><input [(ngModel)]="comment" type="text"></li>
+              <li class="list-group-item" (click)="Order()">Order and pay with cash<button>Order</button></li>
+              <li class="list-group-item"> Order and pay with paypal
+                <div id="paypal-checkout-btn">
+  
+                </div>
+              </li>
+              
+            </ul>          
+      </div>    
+  </div>
